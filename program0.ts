@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 export function getProgram0() {
-    const fps = 10;
+    const fps = 30;
     const tl = gsap.timeline({ paused: true });
 
     const leds = [0, 6, 2, 8, 4, 9, 3, 7, 1, 5].map((led, index) => {
