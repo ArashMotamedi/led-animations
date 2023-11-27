@@ -2,11 +2,9 @@ import gsap from "gsap";
 
 export function getProgram0() {
     const fps = 10;
-    const tl = gsap.timeline();
-    tl.pause();
-    tl.seek(0);
+    const tl = gsap.timeline({ paused: true });
 
-    const leds = [0, 6, 2, 8, 4, 9, 3, 7, 1, 5].map((index) => {
+    const leds = [0, 6, 2, 8, 4, 9, 3, 7, 1, 5].map((led, index) => {
         const obj = { value: 0 }
         const t = gsap.timeline({ repeat: 2 });
         t.to(obj, {
@@ -24,7 +22,6 @@ export function getProgram0() {
         return obj;
     });
 
-    // console.log(tl.duration());
     const trackLength = tl.getChildren()[0].duration();
 
     const frames: number[][] = [];
