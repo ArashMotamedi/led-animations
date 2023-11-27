@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 export function getProgram0() {
-    const fps = 10;
+    const fps = 30;
     const tl = gsap.timeline();
     tl.pause();
     tl.seek(0);
